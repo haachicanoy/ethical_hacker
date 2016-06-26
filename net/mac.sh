@@ -31,12 +31,9 @@ then
 fi
 
 # Changing the mac address
+echo "..Stoping interface"
 `ifconfig $interface down`
+echo "..Changing interface"
 `macchanger -m $mac $interface`
+echo "..Starting interface"
 `ifconfig $interface up`
-`macchanger -s $interface`
-
-# Monitoring
-`airmon-ng start $interface$suffix`
-
-
