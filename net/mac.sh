@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Author Steven Sotelo
 # Const
 suffix="mon"
 
